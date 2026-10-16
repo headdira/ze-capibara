@@ -1,0 +1,26 @@
+name: testes
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar o Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validar marketplace e plugin
+        run: |
+          claude plugin validate .
+          claude plugin validate ze
+      - name: Rodar os testes do Zé
+        run: claude plugin test ze

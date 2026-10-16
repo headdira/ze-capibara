@@ -1,26 +1,34 @@
 <p align="center">
-  <img src="docs/turma.gif" alt="O Zé e a turma de capivarinhas trabalhando acima do prompt do Claude Code" width="100%">
+  <img src="docs/turma.gif" alt="Zé and his crew of little capybaras working above the Claude Code prompt" width="100%">
 </p>
 
-<h1 align="center">Zé, a capivara do Claude Code</h1>
+<h1 align="center">Zé, the Claude Code capybara</h1>
 
 <p align="center">
-  <strong>Seus subagentes viram uma turma de capivaras em pixel art que trabalha bem em cima do seu prompt.</strong>
+  <strong>Your subagents become a crew of pixel art capybaras working right above your prompt.</strong>
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img alt="Licença Apache 2.0" src="https://img.shields.io/badge/licen%C3%A7a-Apache--2.0-blue"></a>
+  <a href="LICENSE"><img alt="License Apache 2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue"></a>
   <img alt="Claude Code mod" src="https://img.shields.io/badge/Claude%20Code-mod-d97757">
   <img alt="100% local" src="https://img.shields.io/badge/100%25-local-3fae4a">
+  <a href="https://github.com/headdira/ze-capibara/actions/workflows/test.yml"><img alt="tests" src="https://github.com/headdira/ze-capibara/actions/workflows/test.yml/badge.svg"></a>
+  <a href="https://github.com/headdira/ze-capibara/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/headdira/ze-capibara?style=social"></a>
 </p>
 
-O Zé é um mod do Claude Code. Ele mora na faixa acima do prompt e mostra, em pixel art, o que o Claude está fazendo agora. Cada subagente que o Claude chama vira uma capivarinha com o traje do tipo dela. Ela trabalha com o adereço da ferramenta que está usando e, quando termina, vai relaxar no ofurô.
+<p align="center">
+  <strong>English</strong> · <a href="README.pt-BR.md">Português</a>
+</p>
 
-Tudo roda na sua máquina. O Zé não faz nenhuma chamada de rede.
+Zé is a Claude Code mod. He lives in the band above your prompt and shows, in pixel art, what Claude is doing right now. Every subagent Claude spawns becomes a little capybara wearing the outfit of its type. It works with a prop that matches the tool it is using and, when it finishes, it goes to relax in the hot tub.
 
-## Cole isto no Claude
+Everything runs on your machine. Zé makes no network calls.
 
-Você não precisa ler o resto deste README para começar. Abra um terminal:
+If Zé made you smile, a ⭐ helps other people find it.
+
+## Paste this into Claude
+
+You don't need to read the rest of this README to get started. Open a terminal:
 
 ```bash
 git clone https://github.com/headdira/ze-capibara ~/ze-capibara
@@ -28,17 +36,23 @@ cd ~/ze-capibara
 claude
 ```
 
-Com o Claude aberto na pasta, cole este prompt:
+With Claude open in that folder, paste this prompt:
 
 ```text
-Instala o Zé deste repositório no meu Claude Code seguindo o CLAUDE.md.
+Install Zé from this repository into my Claude Code following CLAUDE.md.
 ```
 
-O Claude lê o `CLAUDE.md` do repositório, instala o plugin a partir do clone e confere se deu certo. Depois, abra uma sessão nova e o Zé aparece acima do prompt.
+Claude reads the repository's `CLAUDE.md`, installs the plugin from your clone and checks that it worked. Then open a new session and Zé shows up above the prompt.
 
-## Instalação manual
+## Why
 
-Se preferir rodar os comandos você mesmo:
+Claude Code does a lot at once. It reads files, runs commands, calls MCP servers and hands work to subagents that run in parallel. Most of that scrolls by as text.
+
+Zé turns it into something you read at a glance. You see when Claude is reading, typing or building, how many subagents are working, which ones finished and which one fell over. You see when a risky command is about to run. And it makes long sessions a bit more fun.
+
+## Manual install
+
+If you'd rather run the commands yourself:
 
 ```bash
 git clone https://github.com/headdira/ze-capibara ~/ze-capibara
@@ -47,126 +61,128 @@ claude plugin install ze@ze-capibara
 claude plugin list
 ```
 
-Na saída do `claude plugin list`, procure a linha do Zé:
+In the `claude plugin list` output, look for Zé's entry:
 
 ```text
   ❯ ze@ze-capibara
-    Read from: /Users/voce/ze-capibara/ze
+    Read from: /Users/you/ze-capibara/ze
     Status: ✔ enabled
 ```
 
-O `Read from` precisa apontar para a pasta `ze` dentro do seu clone. Abra uma sessão nova do Claude Code e pronto.
+`Read from` must point to the `ze` folder inside your clone. Open a new Claude Code session and you're done.
 
-**Por que clonar?** O Claude lê o mod direto da pasta do clone. Os bonecos que você criar valem na próxima sessão e não somem quando o plugin atualizar.
+**Why clone?** Claude reads the mod straight from your clone. The outfits you create work in the next session and don't vanish when the plugin updates.
 
-### Alternativa rápida, sem customizar
+### Quick option, no customizing
 
-Se você só quer ver o Zé funcionando e não pretende criar bonecos:
+If you only want to see Zé in action and don't plan to create outfits:
 
 ```bash
 claude plugin marketplace add headdira/ze-capibara
 claude plugin install ze@ze-capibara
 ```
 
-Nesse modo o Claude guarda o plugin num cache interno. Qualquer edição que você fizer lá se perde no próximo update. Para customizar, use o clone.
+In this mode Claude keeps the plugin in an internal cache, and `claude plugin list` shows no `Read from` line. Any edit you make there is lost on the next update. To customize, use the clone.
 
-## O que o Zé faz
+## What Zé does
 
-- Lê arquivo com a lupa, digita no notebook quando roda comando e martela quando edita código.
-- Atende o telefone quando o Claude chama um servidor MCP.
-- Entra em pânico quando vê um comando perigoso, como `rm -rf` ou `git push --force`.
-- Chama a turma: cada subagente chega andando, com traje e nome próprios.
-- Comemora quando o turno termina e mostra quanto tempo levou.
-- Cai quando uma ferramenta dá erro ou quando você interrompe o turno.
-- Esconde senhas e tokens antes de escrever qualquer coisa no balão.
+- Reads files with a magnifying glass, types on a laptop when running commands and hammers away when editing code.
+- Answers the phone when Claude calls an MCP server.
+- Panics when he sees a risky command, like `rm -rf` or `git push --force`.
+- Calls the crew: each subagent walks in with its own outfit and name.
+- Celebrates when the turn ends and shows how long it took.
+- Falls over when a tool errors or when you interrupt the turn.
+- Masks passwords and tokens before writing anything in his speech bubble.
 
 <p align="center">
-  <img src="docs/momentos.png" alt="Sete momentos de um turno com o Zé e a turma" width="100%">
+  <img src="docs/momentos.png" alt="Seven moments of a turn with Zé and the crew" width="100%">
 </p>
 
-## Comandos
+## Commands
 
-| Comando | O que faz |
+| Command | What it does |
 | --- | --- |
-| `/ze` | Mostra o que o Zé está fazendo e quem está na turma |
-| `/ze pula` | Faz o Zé pular |
-| `/ze esconder` | Tira o Zé de cima do prompt |
-| `/ze mostrar` | Traz o Zé de volta |
+| `/ze` | Shows what Zé is doing and who is in the crew |
+| `/ze pula` | Makes Zé jump |
+| `/ze esconder` | Hides Zé from above the prompt |
+| `/ze mostrar` | Brings Zé back |
 
-## Prompts prontos
+Zé grew up in Brazil, so his commands are in Portuguese: `pula` is "jump", `esconder` is "hide" and `mostrar` is "show".
 
-O plugin vem com três skills. Com o Zé instalado, cole um destes pedidos em qualquer sessão do Claude e ajuste do seu jeito:
+## Ready-made prompts
 
-| Cole no Claude | Skill que resolve |
+The plugin ships with three skills. With Zé installed, paste one of these into any Claude session and tweak it to your taste:
+
+| Paste into Claude | Skill that handles it |
 | --- | --- |
-| `Cria um boneco do Zé pro meu agente api-tester com chapéu de cowboy e uma lupa` | `ze:criar-boneco` |
-| `Cria um subagente revisor-sql que roda em sonnet e dá um boneco pra ele` | `ze:criar-agente` e `ze:criar-boneco` |
-| `Cria uma skill que gera changelog a partir do git log` | `ze:criar-skill` |
+| `Create a Zé outfit for my api-tester agent with a cowboy hat and a magnifying glass` | `ze:criar-boneco` |
+| `Create a sql-reviewer subagent that runs on sonnet and give it an outfit` | `ze:criar-agente` and `ze:criar-boneco` |
+| `Create a skill that generates a changelog from git log` | `ze:criar-skill` |
 
-A skill de boneco desenha o chapéu e o adereço em pixel art, registra o traje, escreve um teste e roda os testes até ficarem verdes.
+The outfit skill draws the hat and the prop in pixel art, registers the outfit, writes a test and runs the tests until they pass. The skills are written in Portuguese, and Claude answers you in your own language.
 
-## Bonecos
+## Outfits
 
-O Zé escolhe o traje de cada capivarinha pelo tipo do subagente, nesta ordem:
+Zé picks each little capybara's outfit from the subagent type, in this order:
 
-1. **Tabela fixa (`TRAJES`).** Tipos com traje próprio, como `explore` (safári), `plan` (boina e prancheta), `general-purpose` (boné) e `fork` (a laranja do Zé).
-2. **Palavra no nome (`PALAVRAS`).** Se o tipo não está na tabela, o Zé procura uma palavra conhecida no nome. A primeira regra que casa vence.
-3. **Sorteio.** Sem tabela e sem palavra, ela ganha um chapéu sorteado pelo nome. O mesmo nome sempre ganha o mesmo chapéu.
+1. **Fixed table (`TRAJES`).** Types with their own outfit, like `explore` (safari hat), `plan` (beret and clipboard), `general-purpose` (cap) and `fork` (Zé's orange).
+2. **Word in the name (`PALAVRAS`).** If the type isn't in the table, Zé looks for a known word in its name. The first rule that matches wins.
+3. **Draw.** With no table entry and no word, it gets a hat picked from its name. The same name always gets the same hat.
 
-| Se o nome tem | Traje |
+| If the name has | Outfit |
 | --- | --- |
-| `review` | caneta e óculos |
-| `secur`, `secret`, `audit`, `scan` | detetive com cadeado |
-| `test` | prancheta e óculos |
-| `analy`, `extract` | livro e óculos |
-| `verif`, `valid`, `judge`, `check` | capelo e prancheta |
-| `generat`, `scaffold`, `creat`, `migrat`, `build` | capacete e chave |
-| `simplif`, `refactor`, `clean` | boné e tesoura |
-| `perf`, `optim` | faixa e raio |
-| `deploy`, `devops`, `infra`, `k8s`, `cloud`, `ops` | capacete |
-| `explor`, `research`, `search` | safári |
-| `architect`, `design`, `plan` | boina e prancheta |
-| `math`, `proof` | capelo |
-| `doc`, `writ`, `copy`, `market` | boina rosa e lápis |
+| `review` | pen and glasses |
+| `secur`, `secret`, `audit`, `scan` | detective hat and padlock |
+| `test` | clipboard and glasses |
+| `analy`, `extract` | book and glasses |
+| `verif`, `valid`, `judge`, `check` | graduation cap and clipboard |
+| `generat`, `scaffold`, `creat`, `migrat`, `build` | hard hat and wrench |
+| `simplif`, `refactor`, `clean` | cap and scissors |
+| `perf`, `optim` | headband and lightning bolt |
+| `deploy`, `devops`, `infra`, `k8s`, `cloud`, `ops` | hard hat |
+| `explor`, `research`, `search` | safari hat |
+| `architect`, `design`, `plan` | beret and clipboard |
+| `math`, `proof` | graduation cap |
+| `doc`, `writ`, `copy`, `market` | pink beret and pencil |
 
-Então um agente chamado `sql-reviewer` já chega de caneta e óculos, sem você mexer em nada.
+So an agent named `sql-reviewer` already shows up with a pen and glasses, and you don't touch a thing.
 
 <p align="center">
-  <img src="docs/trajes-plugins.png" alt="Capivarinhas vestidas pela palavra no nome do agente" width="80%">
+  <img src="docs/trajes-plugins.png" alt="Little capybaras dressed by the word in the agent's name" width="80%">
 </p>
 
 <details>
-<summary><strong>Fazer na mão</strong></summary>
+<summary><strong>Do it by hand</strong></summary>
 
-Os trajes ficam em `ze/hooks/turma.ts`. Cada desenho é uma lista de strings. Cada letra é uma cor da paleta `PAL` e `.` é transparente.
+Outfits live in `ze/hooks/turma.ts`. Each drawing is a list of strings. Each letter is a color from the `PAL` palette and `.` is transparent.
 
-Este exemplo cria uma cartola e uma lupa, dá as duas para o agente `meu-agente` e veste qualquer agente com `sql`, `banco` ou `dados` no nome.
+This example creates a top hat and a magnifying glass, gives both to the `meu-agente` agent and dresses any agent with `sql`, `banco` or `dados` in its name.
 
-Em `CHAPEUS`:
+In `CHAPEUS` (hats):
 
 ```ts
 cartola: { arte: ['.PPPP.', '.PPPP.', '.RRRR.', 'PPPPPP'], x: 6, y: -3 },
 ```
 
-Em `ITENS`:
+In `ITENS` (props):
 
 ```ts
 lupa: ['.MM', 'MlM', 'MM.', 'h..'],
 ```
 
-Em `TRAJES`:
+In `TRAJES` (fixed table):
 
 ```ts
 'meu-agente': { rotulo: 'meu', cor: PAL.R!, chapeu: CHAPEUS.cartola, item: ITENS.lupa, oculos: true },
 ```
 
-No topo de `PALAVRAS`:
+At the top of `PALAVRAS` (word rules):
 
 ```ts
 [/sql|banco|dados/, { cor: PAL.u!, chapeu: CHAPEUS.cartola, item: ITENS.lupa }],
 ```
 
-E um teste em `ze/tests/meu-agente.test.ts`:
+And a test in `ze/tests/meu-agente.test.ts`:
 
 ```ts
 import { expect, test } from 'claude-code/testing'
@@ -179,78 +195,59 @@ test('boneco do meu-agente', () => {
 })
 ```
 
-Rode `claude plugin test ze` na raiz do clone e abra uma sessão nova para ver.
+Run `claude plugin test ze` from the root of your clone and open a new session to see it.
 
 </details>
 
-## Estrutura do repositório
+## Repository layout
 
 ```text
 ze-capibara/
 ├── .claude-plugin/
-│   └── marketplace.json      marketplace "ze-capibara"
-├── CLAUDE.md                 instruções para o Claude que roda no clone
-├── docs/                     imagens do README
-└── ze/                       o plugin
+│   └── marketplace.json      the "ze-capibara" marketplace
+├── .github/                  test CI, issue and PR templates
+├── CLAUDE.md                 instructions for the Claude running in the clone
+├── CONTRIBUTING.md           how to contribute
+├── README.md                 this README
+├── README.pt-BR.md           README in Portuguese
+├── docs/                     README images
+└── ze/                       the plugin
     ├── .claude-plugin/
     │   └── plugin.json
     ├── hooks/
     │   ├── hooks.json
-    │   ├── register.tsx      eventos do Claude Code e o comando /ze
-    │   ├── palco.tsx         a faixa acima do prompt
-    │   ├── sprites.ts        o desenho do Zé
-    │   ├── turma.ts          as capivarinhas e os trajes
-    │   └── fala.ts           pose e balão de cada ferramenta
+    │   ├── register.tsx      Claude Code events and the /ze command
+    │   ├── palco.tsx         the band above the prompt
+    │   ├── sprites.ts        Zé's drawing
+    │   ├── turma.ts          the little capybaras and their outfits
+    │   └── fala.ts           pose and speech bubble for each tool
     ├── skills/
-    │   ├── criar-boneco/
-    │   ├── criar-agente/
-    │   └── criar-skill/
+    │   ├── criar-boneco/     create an outfit
+    │   ├── criar-agente/     create a subagent
+    │   └── criar-skill/      create a skill
     ├── tests/
     └── types/
 ```
 
-## Como rodar os testes
+## Running the tests
 
-Na raiz do clone:
+From the root of your clone:
 
 ```bash
 claude plugin test ze
 ```
 
-O comando roda todos os `*.test.ts` e `*.test.tsx` de `ze/tests` num ambiente igual ao dos hooks.
+The command runs every `*.test.ts` and `*.test.tsx` in `ze/tests` in the same environment the hooks run in. CI runs the same command on every push and pull request.
 
-## Contribuir
+## Contributing
 
-1. Faça um fork do repositório.
-2. Crie seu boneco em `ze/hooks/turma.ts` e um teste em `ze/tests/`.
-3. Rode `claude plugin test ze` até ficar verde.
-4. Abra um pull request com um print da sua capivarinha.
+1. Fork the repository.
+2. Create your outfit in `ze/hooks/turma.ts` and a test in `ze/tests/`.
+3. Run `claude plugin test ze` until it's green.
+4. Open a pull request with a screenshot of your little capybara.
 
-Bonecos novos, trajes para mais palavras e poses para mais ferramentas são bem-vindos.
+New outfits, more word rules and poses for more tools are all welcome. The step by step is in [CONTRIBUTING.md](CONTRIBUTING.md). Want an outfit but don't feel like drawing? Open an issue with the "New outfit / Novo boneco" template.
 
-## Licença
+## License
 
-[Apache-2.0](LICENSE). Criado por Gerson Moreira.
-
-<details>
-<summary>English</summary>
-
-**Zé** is a Claude Code mod. A pixel art capybara lives above your prompt and shows what Claude is doing. Every subagent Claude spawns becomes a little capybara wearing the outfit of its type. It works with a prop that matches the tool it is using and, when it finishes, it goes to the hot tub. Everything runs locally, with no network calls.
-
-Install it by cloning the repo and letting Claude do the rest:
-
-```bash
-git clone https://github.com/headdira/ze-capibara ~/ze-capibara
-cd ~/ze-capibara
-claude
-```
-
-Then paste this prompt:
-
-```text
-Install Zé from this repository into my Claude Code following CLAUDE.md.
-```
-
-Or install it by hand with `claude plugin marketplace add ~/ze-capibara` and `claude plugin install ze@ze-capibara`, then open a new session. The plugin ships with skills to create capybara outfits, Claude Code subagents and skills.
-
-</details>
+[Apache-2.0](LICENSE). Created by Gerson Moreira.

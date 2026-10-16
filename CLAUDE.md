@@ -2,12 +2,16 @@
 
 Instruções para o Claude Code rodando dentro deste clone.
 
+Responda no idioma do usuário. Ele pode falar inglês, português ou outra língua; estas instruções valem do mesmo jeito.
+
 ## O que é este repositório
 
 O Zé é um mod do Claude Code: uma capivara em pixel art que trabalha na faixa acima do prompt. Cada subagente vira uma capivarinha com o traje do tipo dela, trabalha com o adereço da ferramenta e, quando termina, vai pro ofurô. Roda 100% local, sem rede.
 
 - `.claude-plugin/marketplace.json`: o marketplace `ze-capibara`, com o plugin `ze` em `./ze`.
 - `ze/`: o plugin.
+- `README.md` (inglês) e `README.pt-BR.md` (português): a documentação para pessoas.
+- `CONTRIBUTING.md`: como contribuir.
 - `docs/`: imagens do README.
 
 O usuário clonou o repositório para (1) instalar o Zé, (2) criar bonecos para os agentes dele, (3) criar subagentes e skills do Claude Code.
@@ -32,7 +36,7 @@ Quando o usuário pedir para instalar o Zé:
 
 ### Se o marketplace já veio do GitHub
 
-Se `claude plugin marketplace list` mostra `ze-capibara` com `Source: GitHub`, ou se `ze@ze-capibara` não tem linha `Read from` ou ela aponta para dentro de `~/.claude/plugins/cache`, o plugin está no cache. Edições ali se perdem no próximo update. Ofereça trocar para o clone e só troque se o usuário aceitar:
+Se `claude plugin marketplace list` mostra `ze-capibara` com `Source: GitHub`, ou se `ze@ze-capibara` não tem linha `Read from` (a instalação pelo GitHub não mostra essa linha), o plugin está no cache. Edições ali se perdem no próximo update. Ofereça trocar para o clone e só troque se o usuário aceitar:
 
 ```bash
 claude plugin marketplace remove ze-capibara

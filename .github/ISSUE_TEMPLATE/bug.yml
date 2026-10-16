@@ -1,0 +1,53 @@
+name: Bug
+description: Something is wrong with Zé. / Algo deu errado com o Zé.
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't paste tokens, passwords or private paths.
+        Obrigado por avisar. Não cole tokens, senhas ou caminhos privados.
+  - type: input
+    id: versao
+    attributes:
+      label: Claude Code version / Versão do Claude Code
+      description: Output of `claude --version`. / Saída de `claude --version`.
+    validations:
+      required: true
+  - type: input
+    id: so
+    attributes:
+      label: Operating system / Sistema operacional
+      placeholder: macOS 15, Ubuntu 24.04, Windows 11 (WSL)
+    validations:
+      required: true
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal
+      placeholder: iTerm2, Ghostty, Windows Terminal, VS Code, desktop app
+    validations:
+      required: true
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: What happened / O que aconteceu
+      description: A screenshot or GIF helps a lot. / Um print ou GIF ajuda muito.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Expected behavior / O que você esperava
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Steps to reproduce / Passos para reproduzir
+      placeholder: |
+        1. Open a new session / Abra uma sessão nova
+        2. Ask Claude to ... / Peça ao Claude para ...
+        3. See ... / Veja ...
+    validations:
+      required: true

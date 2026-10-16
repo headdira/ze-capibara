@@ -1,0 +1,50 @@
+name: New outfit / Novo boneco
+description: Ask for an outfit for a subagent. / Peça um boneco para um subagente.
+title: "[outfit] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the little capybara you want. You can also create it yourself: ask Claude Code to use the `ze:criar-boneco` skill.
+        Descreva a capivarinha que você quer. Você também pode criar sozinho: peça ao Claude Code para usar a skill `ze:criar-boneco`.
+  - type: input
+    id: agente
+    attributes:
+      label: Agent name / Nome do agente
+      description: The exact subagent type, like `sql-reviewer`. / O tipo exato do subagente, como `sql-reviewer`.
+      placeholder: sql-reviewer
+    validations:
+      required: true
+  - type: textarea
+    id: traje
+    attributes:
+      label: Outfit / Traje
+      description: What should it look like, and why does it fit the agent? / Como deve ficar e por que combina com o agente?
+    validations:
+      required: true
+  - type: input
+    id: chapeu
+    attributes:
+      label: Hat / Chapéu
+      placeholder: cowboy hat / chapéu de cowboy
+  - type: input
+    id: item
+    attributes:
+      label: Prop / Adereço
+      placeholder: magnifying glass / lupa
+  - type: input
+    id: cores
+    attributes:
+      label: Colors / Cores
+      placeholder: brown hat, red band / chapéu marrom, faixa vermelha
+  - type: textarea
+    id: rascunho
+    attributes:
+      label: Pixel art draft (optional) / Rascunho em pixel art (opcional)
+      description: One string per row, one letter per color, `.` is transparent. / Uma string por linha, uma letra por cor, `.` é transparente.
+      render: text
+      placeholder: |
+        .PPPP.
+        .PPPP.
+        .RRRR.
+        PPPPPP
