@@ -1,0 +1,7 @@
+{
+  "name": "ze",
+  "version": "0.5.0",
+  "description": "O Zé, uma capivara em pixel art que trabalha junto acima do prompt. Cada subagente vira uma capivarinha com o traje do tipo dela, trabalha com o adereço da ferramenta e, quando termina, vai pro ofurô. 100% local.",
+  "author": { "name": "Gerson Moreira", "url": "https://github.com/headdira" },
+  "types": "./types/index.d.ts"
+}

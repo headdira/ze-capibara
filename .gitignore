@@ -1,0 +1,26 @@
+# dependências e build
+node_modules/
+dist/
+coverage/
+
+# sistema e editor
+.DS_Store
+.idea/
+.vscode/
+
+# segredos e dados locais
+.env
+.env.*
+*.pem
+*.key
+*.log
+
+
+# configuração local do Claude Code (permissões, env, tokens)
+.claude/settings.local.json
+.claude/*.local.*
+id_rsa*
+id_ed25519*
+id_ecdsa*
+kubeconfig*
+*.kubeconfig

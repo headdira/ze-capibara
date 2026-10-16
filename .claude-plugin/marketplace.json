@@ -1,0 +1,15 @@
+{
+  "name": "ze-capibara",
+  "description": "O Zé, uma capivara em pixel art que trabalha junto acima do prompt do Claude Code",
+  "owner": {
+    "name": "Gerson Moreira",
+    "url": "https://github.com/headdira"
+  },
+  "plugins": [
+    {
+      "name": "ze",
+      "source": "./ze",
+      "description": "O Zé, a capivara em pixel art que trabalha junto acima do prompt, com skills para criar bonecos, subagentes e skills"
+    }
+  ]
+}
